@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--document type-->
+
+<html>
+
+<head>
+    <script>
+        function ourFunction() {
+            console.log("hej")
+                //console.log(document.getElementById("demo").innerText = "Du har clickat på en rubrik")
+            const parent = document.getElementById("demo")
+            const child = document.createElement("p")
+            child.innerHTML = "Magisk skapad text"
+            parent.append(child)
+        }
+
+        function onHover() {
+            console.log("On Hover")
+        }
+    </script>
+</head>
+
+<body>
+    <h1 onclick="ourFunction()">Hello World!</h1>
+    <p id="demo"></p>
+    <p onclick="onHover()">Hej allesammans!</p>
+    <h2>En underrubrik</h2>
+    <a href="#form">Länk till formulär</a>
+    <h3>Rubrik på nivå 3</h3>
+    <h4>Rubrik på nivå 4</h4>
+    <h5>Rubrik på nivå 5</h5>
+    <h6>Rubrik på nivå 6</h6>
+    <p>Jag håller på att lära mig <i>JavaScript</i>
+        <hr>Och även lite <b>HTML</b>
+    </p>
+    <a href="http://dn.se" target="_parent">Här är en länk till DN</a>
+    <p><img src=" https://media4.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif?cid=ecf05e47n065zl0bfykw5kpm7vidw33p20ymorf7br67wdj3&rid=giphy.gif&ct=g " alt="en katt som bli kittlad">
+    </p>
+    <form id="form">
+        <div>
+            <label for="firstName">Fyll i ditt förnamn</label>
+            <input type="text" id="firstName" placeholder="John" name="first-name">
+        </div>
+        <div>
+            <label for="lastName">Fyll i ditt efternamn</label>
+            <input type="text" id="lastName" placeholder="Andersson" name="last-name">
+        </div>
+        <div>
+            <label>Telefon</label>
+            <input type="tel" id="phone" placeholder="08-12xxxx" name="phone">
+        </div>
+        <div>
+            <label>Lösenord</label>
+            <input id="password" name="password" type="password">
+        </div>
+        <div>
+            <label>Datum</label>
+            <input id="date" name="date" type="date">
+        </div>
+        <div>
+            <label for="cars">Välj din bil</label>
+            <select id="cars" name="cars">
+            <option value="1">Volvo</option>
+            <option value="2" selected>Saab</option>
+            <option value="3">Audi</option>
+           </select>
+        </div>
+        <div>
+            <label for="fruits">Välj dina favorit frukter</label>
+            <select name="fruits" id="fruits" multiple>
+                <option value="1">Äpple</option>
+                <option value="2">Vindruvor</option>
+                <option value="3">Banan</option>
+                <option value="4">Ananas</option>
+
+            </select>
+        </div>
+
+        <div>
+            <label for="lifeStory">Din livhistoria</label>
+            <textarea name="lifeStory" id="lifeStory" cols="30" rows="10"></textarea>
+        </div>
+        <button type="submit">Skickar in</button>
+        <button type="reset">Nollställ</button>
+    </form>
+</body>
+
+</html>
